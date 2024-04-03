@@ -120,9 +120,9 @@ $result = mysqli_query($con, $sql);
                 <div class="card">
                     <div>
                         <div class="numbers"><?php
-                        $cus=mysqli_query($con,"SELECT COUNT(No) FROM `order manage`");
+                        $cus=mysqli_query($con,"SELECT COUNT(Date) FROM `order manage` WHERE Date=CURDATE()");
                         while($row = mysqli_fetch_assoc($cus) )  {
-                            echo $row['COUNT(No)'];
+                            echo $row['COUNT(Date)'];
                         }
                         ?></div>
                         <div class="cardName">Daily Orders</div>
