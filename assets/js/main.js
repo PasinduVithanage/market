@@ -35,6 +35,7 @@ function updateStatusColor(select , rowno) {
         });
 
         console.log("fetch done");
+        header.location = "index.php";
 }
 
 

@@ -119,7 +119,12 @@ $result = mysqli_query($con, $sql);
             <div class="cardBox">
                 <div class="card">
                     <div>
-                        <div class="numbers">1,504</div>
+                        <div class="numbers"><?php
+                        $cus=mysqli_query($con,"SELECT COUNT(No) FROM `order manage`");
+                        while($row = mysqli_fetch_assoc($cus) )  {
+                            echo $row['COUNT(No)'];
+                        }
+                        ?></div>
                         <div class="cardName">Daily Orders</div>
                     </div>
 
@@ -198,6 +203,7 @@ $result = mysqli_query($con, $sql);
                                 <td>Price</td>
                                 <td>Payment</td>
                                 <td>Status</td>
+                                <td>Action</td>
                             </tr>
                         </thead>
 
@@ -212,6 +218,7 @@ $result = mysqli_query($con, $sql);
                                 <td><?php echo $row['Date']?></td>
                                 <td><?php echo $row['Price']?></td>
                                 <td><?php echo $row['Payment']?></td>
+                                <td><?php echo $row['Status']?></td>
                                 <td>
                                     <select  class="statusSelect" onchange="updateStatusColor(this, '<?php echo $row['No']; ?>')">
                                       <option value="Choose">Choose</option>
