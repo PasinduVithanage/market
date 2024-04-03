@@ -1,6 +1,6 @@
 <?php
  require_once('db_connection/data_connection.php'); 
-$sql = "SELECT * FROM `order manage`";
+$sql = "SELECT * FROM `order manage` ORDER BY `order manage`.`No` ASC ";
 $result = mysqli_query($con, $sql);
 ?>
 <!DOCTYPE html>
