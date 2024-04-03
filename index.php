@@ -212,134 +212,8 @@ $result = mysqli_query($con, $sql);
                                 <td><?php echo $row['Date']?></td>
                                 <td><?php echo $row['Price']?></td>
                                 <td><?php echo $row['Payment']?></td>
-                                <td><?php echo $row['Status']?></td>
-                                </tr>
-                                <?php  
-                                }
-                                ?>
-                            <!-- <tr>
-                                
-                                
-                                
-                            </tr>
-
-                            <tr>
-                                <td> 02</td>
-                                <td>#1112</td>
-                                <td>Rashmy Denagama</td>
-                                <td>13 Feb 2024</td>
-                                <td>Rs.1500.00</td>
-                                <td>Paid</td>
                                 <td>
-                                    <select class="statusSelect" onchange="updateStatusColor(this)">
-                                        <option value="Choose">Choose</option>
-                                      <option value="delivered">Delivered</option>
-                                      <option value="pending">Pending</option>
-                                      <option value="return">Return</option>
-                                      <option value="inProgress">In Progress</option>
-                                    </select>
-                                  </td>
-                            </tr>
-
-                            <tr>
-                                <td> 03</td>
-                                <td>#1113</td>
-                                <td>Chathuri Janadini</td>
-                                <td>13 Feb 2024</td>
-                                <td>Rs.2200.00</td>
-                                <td>Paid</td>
-                                <td>
-                                    <select class="statusSelect" onchange="updateStatusColor(this)">
-                                        <option value="Choose">Choose</option>
-                                      <option value="delivered">Delivered</option>
-                                      <option value="pending">Pending</option>
-                                      <option value="return">Return</option>
-                                      <option value="inProgress">In Progress</option>
-                                    </select>
-                                  </td>
-                            </tr>
-
-                            <tr>
-                                <td> 04</td>
-                                <td>#1114</td>
-                                <td>Buddhi Bhashan</td>
-                                <td>12 Feb 2024</td>
-                                <td>Rs.750.00</td>
-                                <td>Due</td>
-                                <td>
-                                    <select class="statusSelect" onchange="updateStatusColor(this)">
-                                        <option value="Choose">Choose</option>
-                                      <option value="delivered">Delivered</option>
-                                      <option value="pending">Pending</option>
-                                      <option value="return">Return</option>
-                                      <option value="inProgress">In Progress</option>
-                                    </select>
-                                  </td>
-                            </tr>
-
-                            <tr>
-                                <td> 05</td>
-                                <td>#1115</td>
-                                <td>Isuru Tharaka</td>
-                                <td>10 Feb 2024</td>
-                                <td>Rs.1000.50</td>
-                                <td>Paid</td>
-                                <td>
-                                    <select class="statusSelect" onchange="updateStatusColor(this)">
-                                        <option value="Choose">Choose</option>
-                                      <option value="delivered">Delivered</option>
-                                      <option value="pending">Pending</option>
-                                      <option value="return">Return</option>
-                                      <option value="inProgress">In Progress</option>
-                                    </select>
-                                  </td>
-                            </tr>
-
-                            <tr>
-                                <td> 06</td>
-                                <td>#1116</td>
-                                <td>Chamitha Gimhan</td>
-                                <td>11 Feb 2024</td>
-                                <td>Rs.1804.00</td>
-                                <td>Paid</td>
-                                <td>
-                                    <select class="statusSelect" onchange="updateStatusColor(this)">
-                                        <option value="Choose">Choose</option>
-                                      <option value="delivered">Delivered</option>
-                                      <option value="pending">Pending</option>
-                                      <option value="return">Return</option>
-                                      <option value="inProgress">In Progress</option>
-                                    </select>
-                                  </td>
-                            </tr>
-
-                            <tr>
-                                <td> 07</td>
-                                <td>#1117</td>
-                                <td>Nihara Kanishka</td>
-                                <td>12 Feb 2024</td>
-                                <td>Rs.5000.00</td>
-                                <td>Paid</td>
-                                <td>
-                                    <select class="statusSelect" onchange="updateStatusColor(this)">
-                                        <option value="Choose">Choose</option>
-                                      <option value="delivered">Delivered</option>
-                                      <option value="pending">Pending</option>
-                                      <option value="return">Return</option>
-                                      <option value="inProgress">In Progress</option>
-                                    </select>
-                                  </td>
-                            </tr>
-
-                            <tr>
-                                <td> 08</td>
-                                <td>#1118</td>
-                                <td>Thilangi De silva</td>
-                                <td>13 Feb 2024</td>
-                                <td>Rs.3200.00</td>
-                                <td>Paid</td>
-                                <td>
-                                    <select class="statusSelect" onchange="updateStatusColor(this)">
+                                    <select  class="statusSelect" onchange="updateStatusColor(this)">
                                       <option value="Choose">Choose</option>
                                       <option value="delivered">Delivered</option>
                                       <option value="pending">Pending</option>
@@ -347,7 +221,14 @@ $result = mysqli_query($con, $sql);
                                       <option value="inProgress">In Progress</option>
                                     </select>
                                   </td>
-                            </tr> -->
+                                  <td>
+                                    <a class='btn btn-danger btn-sm' href="delete.php?No=<?php echo $row['No']?>">Delete</a>
+                                    </td>
+                                </tr>
+                                <?php  
+                                }
+                                ?>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -375,72 +256,6 @@ $result = mysqli_query($con, $sql);
                                     <?php
                                     }
                             ?>
-                            
-                            
-                        
-
-                        <!-- <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>David <br> <span>Italy</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>David <br> <span>Italy</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>David <br> <span>Italy</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr> -->
                     </table>
                 </div>
             </div>
@@ -449,6 +264,8 @@ $result = mysqli_query($con, $sql);
 
     <!-- =========== Scripts =========  -->
     <script src="assets/js/main.js"></script>
+    <script>
+        
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

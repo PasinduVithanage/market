@@ -12,4 +12,6 @@ $con = mysqli_connect($serverName,$userName,$pass,$DB);
 if(mysqli_connect_errno()) {
     echo mysqli_connect_errno();
 }
+
+
 ?>

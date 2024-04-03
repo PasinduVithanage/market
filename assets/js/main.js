@@ -16,6 +16,7 @@ function updateStatusColor(select) {
 }
 
 
+
 list.forEach((item) => item.addEventListener("mouseover", activeLink));
 
 
